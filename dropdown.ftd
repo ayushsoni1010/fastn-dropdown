@@ -1,0 +1,113 @@
+;; -- import: dependencies...
+
+;; --------------------------------------------------------------
+;; --------------------------------------------------------------
+
+-- component dropdown:
+string menuTitle: Dropdown
+string menuOption: Options
+boolean $isDropdownOpen: true
+
+-- ftd.container:
+
+-- ftd.text: $dropdown.menuTitle
+id: c1
+role: $inherited.types.label-large
+color: white
+cursor: pointer
+max-width.fixed.px: 100
+background.solid: teal
+border-color: teal
+border-width.px: 2
+border-radius.px: 6
+padding-vertical.px: 8
+padding-horizontal.px: 14
+$on-click$: $ftd.toggle($a = $dropdown.isDropdownOpen)
+$on-click-outside$: $ftd.set-bool($a = $dropdown.isDropdownOpen, v = false)
+
+-- ftd.container:
+if: {$dropdown.isDropdownOpen}
+background.solid: white
+padding.px: 12
+margin-top.px: 10
+width.fixed.px: 200
+anchor.id: c1
+border-radius.px: 6
+
+-- ftd.column:
+spacing.fixed.px: 10
+width.fixed.px: 200
+
+-- ftd.row: 
+
+-- ftd.text: $dropdown.menuOption
+role: $inherited.types.label-large
+color: black
+cursor: pointer
+width.fixed.px: 175
+background.solid: white
+border-color: teal
+border-width.px: 2
+border-radius.px: 6
+padding-vertical.px: 8
+padding-horizontal.px: 14
+$on-click$: $ftd.toggle($a = $dropdown.isDropdownOpen)
+
+-- end: ftd.row
+
+-- ftd.row: 
+
+-- ftd.text: $dropdown.menuOption
+role: $inherited.types.label-large
+color: black
+cursor: pointer
+width.fixed.px: 175
+background.solid: white
+border-color: teal
+border-width.px: 2
+border-radius.px: 6
+padding-vertical.px: 8
+padding-horizontal.px: 14
+$on-click$: $ftd.toggle($a = $dropdown.isDropdownOpen)
+
+-- end: ftd.row
+
+-- ftd.row: 
+
+-- ftd.text: $dropdown.menuOption
+role: $inherited.types.label-large
+color: black
+cursor: pointer
+width.fixed.px: 175
+background.solid: white
+border-color: teal
+border-width.px: 2
+border-radius.px: 6
+padding-vertical.px: 8
+padding-horizontal.px: 14
+$on-click$: $ftd.toggle($a = $dropdown.isDropdownOpen)
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.container
+
+-- end: ftd.container
+
+-- end: dropdown
+
+;; --------------------------------------------------------------
+;; --------------------------------------------------------------
+
+-- ftd.container:
+margin.px: 100
+padding.px: 200
+background.solid: $inherited.colors.text
+align-self: center
+border-radius.px: 10
+
+-- dropdown:
+menuTitle: Dropdown
+
+-- end: ftd.container
